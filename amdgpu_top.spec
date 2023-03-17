@@ -18,7 +18,7 @@ BuildRequires:  rust-packaging
 amdgpu_top is tool that show AMD GPU utilization, like umr or clbr/radeontop.
   
 %prep
-%autosetup -p 1 -a 1
+%autosetup -n %{name}-main -p 1 -a 1
 install -D -m 0644 %{SOURCE2} .cargo/config
 
 %build
