@@ -12,6 +12,7 @@ Source2:        cargo_config
 
 ExclusiveArch:  %{rust_arches}
 BuildRequires:  rust-packaging
+BuildRequires:  pkgconfig(ncurses)
 
 
 %description
