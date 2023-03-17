@@ -32,3 +32,4 @@ install -D -m 0644 %{SOURCE2} .cargo/config
 install -Dm755 target/release/amdgpu_top %{buildroot}/usr/bin/amdgpu_top
 
 %files
+%{_bindir}/amdgpu_top
