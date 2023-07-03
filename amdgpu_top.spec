@@ -1,7 +1,7 @@
 %define _empty_manifest_terminate_build 0
 %define git 20230317
 Name:           amdgpu_top
-Version:        0.1.9
+Version:        0.1.10
 Release:        1
 Summary:        tool to show AMDGPU usage
 License:        MIT
