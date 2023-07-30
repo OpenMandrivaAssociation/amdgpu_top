@@ -1,13 +1,11 @@
 %define _empty_manifest_terminate_build 0
-%define git 20230317
+
 Name:           amdgpu_top
-Version:        0.1.10
+Version:        0.1.11
 Release:        1
 Summary:        tool to show AMDGPU usage
 License:        MIT
 URL:            https://github.com/Umio-Yasuno/amdgpu_top
-# Until there are tagged releases, we use git.
-#Source0:        https://github.com/Umio-Yasuno/amdgpu_top/archive/refs/heads/amdgpu_top-main.tar.gz
 Source0:        https://github.com/Umio-Yasuno/amdgpu_top/archive/refs/tags/v%{version}/%{name}-%{version}.tar.gz
 Source1:        vendor.tar.xz
 Source2:        cargo_config
