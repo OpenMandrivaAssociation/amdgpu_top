@@ -1,7 +1,7 @@
 %define _empty_manifest_terminate_build 0
 
 Name:           amdgpu_top
-Version:        0.3.1
+Version:        0.4.0
 Release:        1
 Summary:        tool to show AMDGPU usage
 License:        MIT
