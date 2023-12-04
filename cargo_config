@@ -1,5 +1,9 @@
 [source.crates-io]
 replace-with = "vendored-sources"
 
+[source."git+https://github.com/Umio-Yasuno/libdrm-amdgpu-sys-rs"]
+git = "https://github.com/Umio-Yasuno/libdrm-amdgpu-sys-rs"
+replace-with = "vendored-sources"
+
 [source.vendored-sources]
 directory = "vendor"
