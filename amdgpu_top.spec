@@ -24,7 +24,7 @@ amdgpu_top is tool that show AMD GPU utilization, like umr or clbr/radeontop.
 install -D -m 0644 %{SOURCE2} .cargo/config
 
 %build
-%cargo_build --offline
+%cargo_build
 
 %install
 %cargo_install
