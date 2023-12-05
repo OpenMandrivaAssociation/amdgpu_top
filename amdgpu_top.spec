@@ -12,6 +12,8 @@ Source2:        cargo_config
 
 ExclusiveArch:  %{rust_arches}
 BuildRequires:  rust-packaging
+BuildRequires:  rust = 1.73.0
+BuildRequires:  cargo = 1.73.0
 BuildRequires:  pkgconfig(ncurses)
 BuildRequires:  pkgconfig(libdrm)
 
