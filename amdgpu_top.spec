@@ -12,8 +12,8 @@ Source2:        cargo_config
 
 ExclusiveArch:  %{rust_arches}
 BuildRequires:  rust-packaging
-BuildRequires:  rust = 1.72.1
-BuildRequires:  cargo = 1.72.1
+BuildRequires:  rust
+BuildRequires:  cargo
 BuildRequires:  pkgconfig(ncurses)
 BuildRequires:  pkgconfig(libdrm)
 
@@ -23,7 +23,7 @@ amdgpu_top is tool that show AMD GPU utilization, like umr or clbr/radeontop.
   
 %prep
 %autosetup -n %{name}-%{version} -p 1 -a 1
-install -D -m 0644 %{SOURCE2} .cargo/config
+#install -D -m 0644 %{SOURCE2} .cargo/config
 
 %build
 %cargo_build
