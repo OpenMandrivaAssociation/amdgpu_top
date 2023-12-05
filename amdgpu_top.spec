@@ -8,7 +8,6 @@ License:        MIT
 URL:            https://github.com/Umio-Yasuno/amdgpu_top
 Source0:        https://github.com/Umio-Yasuno/amdgpu_top/archive/refs/tags/v%{version}/%{name}-%{version}.tar.gz
 Source1:        vendor.tar.xz
-Source2:        cargo_config
 
 ExclusiveArch:  %{rust_arches}
 BuildRequires:  rust-packaging
@@ -21,7 +20,13 @@ amdgpu_top is tool that show AMD GPU utilization, like umr or clbr/radeontop.
   
 %prep
 %autosetup -n %{name}-%{version} -p 1 -a 1
-install -D -m 0644 %{SOURCE2} .cargo/config
+%cargo_prep -v vendor
+cat >>.cargo/config <<EOF
+
+[source."git+https://github.com/Umio-Yasuno/libdrm-amdgpu-sys-rs"]
+git = "https://github.com/Umio-Yasuno/libdrm-amdgpu-sys-rs"
+replace-with = "vendored-sources"
+EOF
 
 %build
 %cargo_build
