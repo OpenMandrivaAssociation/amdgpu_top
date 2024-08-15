@@ -22,10 +22,16 @@ amdgpu_top is tool that show AMD GPU utilization, like umr or clbr/radeontop.
 %autosetup -n %{name}-%{version} -p 1 -a 1
 %cargo_prep -v vendor
 cat >>.cargo/config <<EOF
+[source.crates-io]
+replace-with = "vendored-sources"
 
 [source."git+https://github.com/Umio-Yasuno/libdrm-amdgpu-sys-rs"]
 git = "https://github.com/Umio-Yasuno/libdrm-amdgpu-sys-rs"
 replace-with = "vendored-sources"
+
+[source.vendored-sources]
+directory = "vendor"
+
 EOF
 
 %build
