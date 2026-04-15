@@ -9,7 +9,7 @@ URL:            https://github.com/Umio-Yasuno/amdgpu_top
 Source0:        https://github.com/Umio-Yasuno/amdgpu_top/archive/refs/tags/v%{version}/%{name}-%{version}.tar.gz
 Source1:        vendor.tar.xz
 
-ExclusiveArch:  %{rust_arches}
+#ExclusiveArch:  %{rust_arches}
 BuildRequires:  rust-packaging
 BuildRequires:  pkgconfig(ncurses)
 BuildRequires:  pkgconfig(libdrm)
