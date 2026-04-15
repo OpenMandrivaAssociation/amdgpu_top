@@ -1,7 +1,7 @@
 %define _empty_manifest_terminate_build 0
 
 Name:           amdgpu_top
-Version:        0.11.0
+Version:        0.11.3
 Release:        1
 Summary:        tool to show AMDGPU usage
 License:        MIT
@@ -23,9 +23,9 @@ amdgpu_top is tool that show AMD GPU utilization, like umr or clbr/radeontop.
 %cargo_prep -v vendor
 cat >>.cargo/config.toml <<EOF
 
-[source."git+https://github.com/Umio-Yasuno/libdrm-amdgpu-sys-rs?rev=8d0029b4cf8f3b995728614f96c03f6e3dcf4f9e"]
+[source."git+https://github.com/Umio-Yasuno/libdrm-amdgpu-sys-rs?rev=5f4d7ea6d4d51b2536ac7605a4c325cac15bdfd9"]
 git = "https://github.com/Umio-Yasuno/libdrm-amdgpu-sys-rs"
-rev = "8d0029b4cf8f3b995728614f96c03f6e3dcf4f9e"
+rev = "5f4d7ea6d4d51b2536ac7605a4c325cac15bdfd9"
 replace-with = "vendored-sources"
 EOF
 
